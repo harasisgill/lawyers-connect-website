@@ -1,0 +1,125 @@
+#BB
+{
+  width: 800px;
+  border: 1px red solid;
+  height: 1200px;
+  background-color:white;
+}
+body
+{
+    
+            background-image: url(Pictures/bakk4.jpg);
+            background-attachment: fixed;
+}
+
+#a
+{
+    width: 800px;
+    height: 150px;
+    background-color: white;
+    border: 1px black solid;
+}
+#b
+{
+    width: 800px;
+    height: 50px;
+        background-color: white;
+    border: 1px black solid;
+}
+#c
+{
+    width: 800px;
+    height: 250px;
+        background-color: white;
+    border: 1px black solid;
+}
+#d
+{
+    width: 800px;
+    height: 50px;
+        background-color: white;
+    border: 1px black solid;
+}
+
+
+#e
+{
+    width: 800px;
+    height: 250px;
+    background-color:coral;
+    border: 1px black solid;
+}
+#ea:hover
+{
+    transform: scale(1.1);
+}
+#f
+{
+    width: 800px;
+    height: 50px;
+        background-color: white;
+    border: 1px black solid;
+}
+#g
+{
+    width: 800px;
+    height: 200px;
+        background-color: white;
+    border: 1px black solid;
+}
+#g:hover
+{
+    opacity: .5;
+}
+#h
+{
+    width: 800px;
+    height: 150px;
+        background-color: white;
+    border: 1px black solid;
+}
+#i
+{
+    width: 800px;
+    height:50px;
+        background-color: white;
+    border: 1px black solid;
+}
+#ea
+{   
+    margin-left: -500px;
+    margin-top: 15px;
+    width: 230px;
+    height:220px;
+        background-color: white;
+    border: 1px black solid;
+}#ec
+{   
+    margin-right: -500px;
+    margin-top: -222px;
+    width: 230px;
+    height:220px;
+        background-color: white;
+    border: 1px black solid;
+}#eb
+{   
+    margin-top: -222px;
+    width: 230px;
+    height:220px;
+        background-color: white;
+    border: 1px black solid;
+}
+.z:hover
+{
+    transform: rotate(360deg);
+    transition: ease all 1s;
+}
+.z
+{
+    margin-top: 10px;
+    width: 80px;
+    transition: ease all 1s;
+    border: 1px red solid;
+    margin: 20px 0px 0px 0px;
+    border-radius: 50%;
+}

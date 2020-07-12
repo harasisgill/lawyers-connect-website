@@ -1,0 +1,66 @@
+#contents
+{
+    border: 1px red dashed;
+    width: 800px;
+    height: 400px;
+}
+#slidemenu 
+{
+    background-color: cornsilk;
+    color: crimson;
+    float:left;
+    border: 1px red dashed;
+    width: 400px;
+    height: 400px;
+    overflow-y:scroll;
+    margin-left: 0px;
+}
+#slidemenu ol
+{
+    list-style: none;
+    margin-top: 0px;
+}
+#slidemenu>ol>li,#slidemenu>ol>a>li
+{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-left: -30px;
+    border-bottom: 2px red dashed;
+    line-height: normal;
+}
+#slidemenu li:hover
+{
+    background-color: bisque;
+    cursor: pointer;
+}
+a
+{
+    color: inherit;
+    background-color: inherit;
+    text-decoration:none;
+}
+#slidemenu::-webkit-scrollbar
+{
+    width: 10px;
+}
+#slidemenu::-webkit-scrollbar-thumb
+{
+    background-color:salmon;
+    border-radius: 5px;    
+
+}
+#slidemenu::-webkit-scrollbar-track
+		{
+			background-color:inherit;
+			border-radius:5px;
+		}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <link rel="stylesheet" href="CSS/marks.css">
+    <script type="text/javascript">
+        function doTotal() {
+            var a = document.frm.txtCPP.value;
+            var b = document.frm.txtJAVA.value;
+            var c = document.frm.txtWDP.value;
+            var jv = parseFloat(a);
+            var cp = parseFloat(b);
+            var wd = parseFloat(c);
+            var tot = jv + cp + wd;
+            document.frm.txtResult.value = tot;
+
+        }
+
+        function doPer() {
+            var a = document.frm.txtCPP.value;
+            var b = document.frm.txtJAVA.value;
+            var c = document.frm.txtWDP.value;
+            var jv = parseFloat(a);
+            var cp = parseFloat(b);
+            var wd = parseFloat(c);
+            var tot = jv + cp + wd;
+            var per = ((jv + cp + wd) / 3);
+            document.frm.txtResult.value = per;
+        }
+
+        function doResult() {
+            var a = document.frm.txtCPP.value;
+            var b = document.frm.txtJAVA.value;
+            var c = document.frm.txtWDP.value;
+            var jv = parseFloat(a);
+            var cp = parseFloat(b);
+            var wd = parseFloat(c);
+            var tot = parseFloatt(jv + cp + wd);
+            var per = parseFloat(tot / 3);
+            if (per > 33) {
+                var bool = "PASS";
+                document.frm.txtResult.value = bool;
+            } else {
+                var bool = "FAIL";
+                document.frm.txtResult.value = bool;
+            }
+        }
+        function check()
+        {
+            document.getElementById("BB").style.visibility="visible";
+        }
+        function hbb()
+        {
+            document.getElementById("BB").style.visibility="hidden";
+        }
+    </script>
+    <style>
+    </style>
+</head>
+
+<body onload="hbb();">
+    <center>
+        <div id="overall">
+            <div id="top" onclick="check();">
+                Click here to Continue:
+            </div>
+            <div id="BB" >
+                <form name="frm">
+                    <table>
+                        <tr>
+                            <td>CPP</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" border="0"><input type="text" placeholder="Enter CPP score" name="txtCPP" maxlength="2" autofocus></td>
+                        </tr>
+                        <tr>
+                            <td>JAVA</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" border="0"><input type="text" placeholder="Enter JAVA score" name="txtJAVA" maxlength="2"></td>
+                        </tr>
+                        <tr>
+                            <td>WDP</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" border="0"><input type="text" placeholder="Enter WDP score" name="txtWDP" maxlength="2"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td><input type="button" value="Total" name="btnTotal" onclick="doTotal();"></td>
+                            <td><input type="button" value="%age" name="btnPer" onclick="doPer();"></td>
+                            <td><input type="button" value="Result" name="btnResult" onclick="doResult();"></td>
+                            <td><input type="reset" value="Reset" name="btnReset"></td>
+                        </tr>
+                    </table>
+                    <input type="text" name="txtResult" readOnly>
+                </form>
+            </div>
+        </div>
+    </center>
+</body>
+</html>

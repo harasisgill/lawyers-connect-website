@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <style>
+        #BB {
+            margin-top: 30px;
+            margin-left: 440px;
+            box-shadow: 5px -5px 30px black;
+        border: 1px black solid;
+            width: 400px;
+            height: 500px;
+        }
+
+        body {
+            background-image: url(Pictures/hammer.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #SU {
+            margin-left: 10px;
+            color: black;
+        }
+    </style>
+    <script type="text/javascript">
+        function ckUid() {
+            var u = document.getElementById("SUid").value;
+            if (u == "") {
+                alert("Please enter User Name");
+                document.getElementById("SUid").value = "Please Fill";
+                document.getElementById("SUid").style.color = "red";
+            } else {
+                document.getElementById("SUid").style.color = "black";
+                document.getElementById("SUcf").style.color = "green";
+            }
+        }
+
+        function ckPsd() {
+            var u = document.getElementById("SPsd").value;
+            if (u == "") {
+                alert("Please enter Password to login");
+                document.getElementById("SPsd").value = "Fill password";
+                document.getElementById("SPsd").style.color = "red";
+                document.getElementById("SPcf").style.color = "red";
+            } else {
+                document.getElementById("SPsd").style.color = "black";
+                document.getElementById("SPcf").style.color = "green";
+            }
+        }
+
+        function wasP(SPsd, was) {
+            var r = /(?=^.{8,}$)(?=.*\d)(?=.*[!@#$%^&*]+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
+            if (r.test(Psd) == true) {
+                was.innerHTML = "Strong";
+                was.style.color = "green";
+            } else
+            if (Psd.length < 8 && Psd.length > 4) {
+                was.innerHTML = "Average";
+                was.style.color = "yellow";
+            } else
+            if (Psd.length <= 4 && Psd.length >= 1) {
+                was.innerHTML = "Weak";
+                was.style.color = "red";
+
+            } else {
+                return;
+            }
+
+            function Mno(Smno, mn) {
+                var r = /^[7-9]{1}[0-9]{9}$/;
+                var bool = r.test(m);
+
+                if (bool == true) {
+                    mn.innerHTML = "Correct";
+                    mn.innerHTML.style.color = "green";
+                } else {
+                    alert("invalid mobile number");
+                    mn.innerHTML = "Incorreect";
+                    mn.innerHTML.style.color = "red";
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container" id="BB">
+        <div class="col-md-4">
+            <h1><label id="SU"><b><u>Sign Up</u></b></label></h1>
+        </div><br><br>
+        <form name="frm" method="post" action="Signup-process.php">
+            <center>
+                <div class="col-md-4">
+                    <label><b>Name:</b></label>
+                    <input type="text" id="SUid" onblur="ckUid();" style="background: transparent;border: 1px black solid" autofocus>
+                </div><br>
+                <div id="SUcf"></div><br>
+                <div class="col-md-4">
+                    <label><b>Mobile:</b></label>
+                    <input type="text" onkeyup="Mno(this.value,mn);" id="Smno" style="background: transparent;border: 1px black solid" >
+                </div><br>
+                <div id="mn"></div><br>
+                <div class="col-md-2">
+                    <label><b>Password: </b></label>
+                    <input type="password" id="SPsd" onblur="ckPsd();" onkeyup="wasP(this.value,was);" style="background: transparent;border: 1px black solid">
+                </div>
+                <br>
+                <div id="was"></div><br>
+                <div>
+                    <input type="submit" id="sub" name="sub" value="Submit" style="background-color: black;color: white;width: 80px;height: 30px;box-shadow: 5px 5px 10px black" >
+                </div>
+
+            </center>
+        </form>
+    </div>
+
+</body>
+</html>
