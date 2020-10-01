@@ -10,7 +10,6 @@ if(isset($_SESSION["luid"])==true)
 
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -30,6 +29,8 @@ if(isset($_SESSION["luid"])==true)
     var f1,f2,f3;
     function chkUid()
     {
+	    
+	    /* Nice Website */
         /*var ref=document.getElementById("uid");
         var val=ref.value;
         alert(val);*/
